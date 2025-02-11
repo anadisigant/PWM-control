@@ -1,7 +1,7 @@
 # PWM-control
 Repositório criado a fim de armazenar uma aplicação prática do módulo PWM. <br>
 __Autora:__ Ana Karolina Disigant Reis<br>
-__Vídeo:__ [Controle de servomotor por PWM]()<br>
+__Vídeo:__ [Controle de servomotor por PWM](https://www.youtube.com/watch?v=Dj1vZzwB1VA)<br>
 
 ## Controle de servomotor por PWM
 O emprego do módulo PWM (do inglês, Pulse Width Modulation) se faz presente na simulação de controle do ângulo de um servomotor.<br>
