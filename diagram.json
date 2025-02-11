@@ -1,0 +1,18 @@
+{
+    "version": 1,
+    "author": "Ana Disigant",
+    "editor": "wokwi",
+    "parts": [
+      { "type": "board-pi-pico-w", "id": "pico", "top": 15.95, "left": -121.25, "attrs": {} },
+      { "type": "wokwi-servo", "id": "servo1", "top": 46, "left": 76.8, "attrs": {} }
+    ],
+    "connections": [
+      [ "pico:GP0", "$serialMonitor:RX", "", [] ],
+      [ "pico:GP1", "$serialMonitor:TX", "", [] ],
+      [ "pico:GND.8", "servo1:GND", "black", [ "h38.71", "v48" ] ],
+      [ "pico:3V3", "servo1:V+", "green", [ "h29.11", "v38.3" ] ],
+      [ "pico:GP22", "servo1:PWM", "green", [ "h29.11", "v-19.4" ] ]
+    ],
+    "dependencies": {}
+  }
+  
