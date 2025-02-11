@@ -10,7 +10,7 @@ __Componentes necessários:__ <br>
 2) Servomotor – motor micro servo padrão – Wokwi.
 
 __Requisitos de desenvolvimento:__
-1) Considerando a GPIO 22, defina a sua frequência de PWM para, aproximadamente, 50Hz – período de 20ms. ✅ 
+__1) Considerando a GPIO 22, defina a sua frequência de PWM para, aproximadamente, 50Hz – período de 20ms. ✅__
 ```c
 const uint16_t WRAP_PERIOD = 65535; // Valor máximo do contador - WRAP
 const float PWM_DIVISER = 38.16;    // Divisor do clock para o PWM (frequência de PWM para aproximadamente 50Hz)
@@ -28,7 +28,7 @@ void pwm_setup()
 - A frequência do PWM é ajustada para aproximadamente **50Hz** com um divisor de clock de **38.16** e um **WRAP_PERIOD** de **65535**.
 - Essa configuração garante que o PWM tenha um período de **20ms (50Hz)**, essencial para o controle do servo.
 
-2) Defina o ciclo ativo do módulo PWM para 2.400µs (microssegundos) – Ciclo de Trabalho (Duty Cycle) de 0,12%. isto ajustará a flange (braço) do servomotor para a posição de, aproximadamente, 180 graus. Aguarde 05 segundos nesta posição. ✅
+__2) Defina o ciclo ativo do módulo PWM para 2.400µs (microssegundos) – Ciclo de Trabalho (Duty Cycle) de 0,12%. isto ajustará a flange (braço) do servomotor para a posição de, aproximadamente, 180 graus. Aguarde 05 segundos nesta posição. ✅__
 ```c
 set_duty_cycle(0.12); // 2.400µs → 180º
 sleep_ms(5000);
@@ -36,7 +36,7 @@ sleep_ms(5000);
 - **0.12** representa **12%** do ciclo ativo, o que equivale a **2400µs**.
 - O código mantém essa posição por **5 segundos** com `sleep_ms(5000)`.
 
-3) Defina o ciclo ativo do módulo PWM para 1.470µs (microssegundos) – Ciclo de Trabalho (Duty Cycle) de 0,0735%. Isto ajustará a flange do servomotor para a posição de, aproximadamente, 90 graus. Aguarde 05 segundos nesta posição. ✅
+__3) Defina o ciclo ativo do módulo PWM para 1.470µs (microssegundos) – Ciclo de Trabalho (Duty Cycle) de 0,0735%. Isto ajustará a flange do servomotor para a posição de, aproximadamente, 90 graus. Aguarde 05 segundos nesta posição. ✅__
 ```c
 set_duty_cycle(0.0735); // 1.470µs → 90º
 sleep_ms(5000);
@@ -44,7 +44,7 @@ sleep_ms(5000);
 - **0.0735** representa **7.35%** do ciclo ativo, o que equivale a **1470µs**.
 - O código mantém essa posição por **5 segundos**.
 
-4) Defina o ciclo ativo do módulo PWM para 500µs (microssegundos) – Ciclo de Trabalho (Duty Cycle) de 0,025%. Isto ajustará a flange do servomotor para a posição de, aproximadamente, 0 graus. Aguarde 05 segundos nesta posição. ✅
+__4) Defina o ciclo ativo do módulo PWM para 500µs (microssegundos) – Ciclo de Trabalho (Duty Cycle) de 0,025%. Isto ajustará a flange do servomotor para a posição de, aproximadamente, 0 graus. Aguarde 05 segundos nesta posição. ✅__
 ```c
 set_duty_cycle(0.025); // 500µs → 0º
 sleep_ms(5000);
@@ -52,7 +52,7 @@ sleep_ms(5000);
 - **0.025** representa **2.5%** do ciclo ativo, o que equivale a **500µs**.
 - O código mantém essa posição por **5 segundos**.
 
-5) Após a realização das proposições anteriores, crie uma rotina para movimentação periódica do braço do servomotor entre os ângulos de 0 e 180 graus. Obs.: a movimentação da flange deve ser suave, recomenda-se o incremento de ciclo ativo de ±5µs, com um atraso de ajuste de 10ms. ✅
+__5) Após a realização das proposições anteriores, crie uma rotina para movimentação periódica do braço do servomotor entre os ângulos de 0 e 180 graus. Obs.: a movimentação da flange deve ser suave, recomenda-se o incremento de ciclo ativo de ±5µs, com um atraso de ajuste de 10ms. ✅__
 
 ```c
 for (int i = 0; i < 380; i++) {  // De 0 a 180 graus
@@ -68,7 +68,7 @@ for (int i = 0; i < 380; i++) {  // De 180 a 0 graus
 - O código implementa **incrementos e decrementos de ±5µs** a cada **10ms**, garantindo um **movimento suave** do servo entre **0° e 180°** e vice-versa.
 - **O total de 380 incrementos** permite cobrir o intervalo entre os extremos.
 
-6) Com o emprego da Ferramenta Educacional BitDogLab, faça um experimento com o código deste exercício utilizando o LED RGB – GPIO 12. ✅
+__6) Com o emprego da Ferramenta Educacional BitDogLab, faça um experimento com o código deste exercício utilizando o LED RGB – GPIO 12. ✅__
 <br>
 - O experimento pode ser conferido na branch teste-BitDogLab
 
