@@ -9,7 +9,8 @@ __Componentes necessários:__ <br>
 1) Microcontrolador Raspberry Pi Pico W;
 2) Servomotor – motor micro servo padrão – Wokwi.
 
-__Requisitos de desenvolvimento:__<br>
+__Requisitos de desenvolvimento:__ <br>
+
 __1) Considerando a GPIO 22, defina a sua frequência de PWM para, aproximadamente, 50Hz – período de 20ms. ✅__
 ```c
 const uint16_t WRAP_PERIOD = 65535; // Valor máximo do contador - WRAP
