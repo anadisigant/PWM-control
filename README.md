@@ -100,6 +100,6 @@ __Configuração e Compilação:__
 
 __Uso__
 
-1. Após carregar o firmware no Raspberry Pi Pico, o temporizador será inicializado.
+1. Após carregar o firmware no Raspberry Pi Pico e dar o play no wokwi simulator, o trabalho do servomotor será inicializado.
 2. O código está configurado para acionar eventos em intervalos regulares.
-3. Para modificar o tempo do temporizador, ajuste os parâmetros no código-fonte.
+3. Para modificar o tempo das ações, ajuste os parâmetros no código-fonte.
